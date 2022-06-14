@@ -25,3 +25,17 @@ module "sandbox" {
 
   account_customizations_name = "sandbox"
 }
+
+module "import-aft-account" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "donovandurand+aftprod@gmail.com"
+    AccountName               = "aft-prod"
+    ManagedOrganizationalUnit = "AVX AFT"
+    SSOUserEmail              = "donovandurand@gmail.com"
+    SSOUserFirstName          = "Donovan"
+    SSOUserLastName           = "Durand"
+  }
+
+}
