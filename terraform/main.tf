@@ -42,4 +42,9 @@ module "import-aft-account" {
     "controltower" = "aft-prod"
   }
 
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
+
 }
