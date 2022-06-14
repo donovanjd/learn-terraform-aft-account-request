@@ -1,17 +1,17 @@
-module "import-aft-account" {
+module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "donovandurand+aftprod@gmail.com"
-    AccountName               = "aft-prod"
+    AccountEmail              = "donovandurand+aftdev3@gmail.com"
+    AccountName               = "aft-dev-3"
     ManagedOrganizationalUnit = "AVX AFT"
     SSOUserEmail              = "donovandurand@gmail.com"
     SSOUserFirstName          = "Donovan"
     SSOUserLastName           = "Durand"
   }
 
-   account_tags = {
-    "controltower" = "aft-prod"
+  account_tags = {
+    "Learn Tutorial" = "AFT"
   }
 
   change_management_parameters = {
@@ -19,4 +19,9 @@ module "import-aft-account" {
     change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
   }
 
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = "sandbox"
 }
