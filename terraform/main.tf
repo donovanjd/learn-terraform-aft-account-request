@@ -38,4 +38,8 @@ module "import-aft-account" {
     SSOUserLastName           = "Durand"
   }
 
+   account_tags = {
+    "controltower" = "aft-prod"
+  }
+
 }
